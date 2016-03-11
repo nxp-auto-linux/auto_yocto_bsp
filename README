@@ -1,0 +1,2 @@
+repo init -u http://sw-stash.freescale.net/scm/alb/fsl-s32v-yocto-bsp.git
+repo sync
