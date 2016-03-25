@@ -11,7 +11,7 @@
   <project remote="dnyocto" revision="c841231b9f327d2d06d19d2ba1324dd86b83617c" name="meta-oe.git" path="meta-oe"/>
   <project remote="dnyocto" revision="0277cbcb47db4239d0a4aa3b37c5c6a705070951" name="meta-virtualization.git" path="meta-virtualization"/>
   <project remote="dnyocto" revision="03b0fbcf6b3b5cd16ae16738fbaabd1c6bf98536" name="poky.git" path="poky"/>
-  <project remote="alb" revision="e1ca91f1839797b18386b26d2347fe7c7a092ef3" name="meta-fsl-s32v.git" path="meta-fsl-s32v"/>
+  <project remote="alb" revision="a80814a8f950a0d887f7860f32cf2c675b32b50c" name="meta-fsl-s32v.git" path="meta-fsl-s32v"/>
 
   </manifest>
 
