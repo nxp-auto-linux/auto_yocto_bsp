@@ -4,14 +4,14 @@
   <remote fetch="http://sw-stash.freescale.net/scm/dnyocto" name="dnyocto" />
   <remote fetch="http://sw-stash.freescale.net/scm/alb" name="alb" />
 
-  <project remote="dnyocto" revision="0a235c4bcd4057608ee60b8c898eec9509632b95" name="meta-fsl-toolchain.git" path="meta-fsl-toolchain"/>
+  <project remote="alb" revision="ef75e677db939fa8088cc654ed3eca8d1806d79d" name="meta-fsl-arm.git" path="meta-fsl-arm"/>
+  <project remote="alb" revision="a80814a8f950a0d887f7860f32cf2c675b32b50c" name="meta-fsl-s32v.git" path="meta-fsl-s32v"/>
   <project remote="dnyocto" revision="b8ff02a8d508464a16c84e1d13c155f45aa98cbe" name="meta-fsl-networking.git" path="meta-fsl-networking"/>
+  <project remote="dnyocto" revision="0a235c4bcd4057608ee60b8c898eec9509632b95" name="meta-fsl-toolchain.git" path="meta-fsl-toolchain"/>
   <project remote="dnyocto" revision="5075a82bd510d19617803fb16da2375605225cbb" name="meta-linaro.git" path="meta-linaro"/>
   <project remote="dnyocto" revision="c841231b9f327d2d06d19d2ba1324dd86b83617c" name="meta-oe.git" path="meta-oe"/>
   <project remote="dnyocto" revision="0277cbcb47db4239d0a4aa3b37c5c6a705070951" name="meta-virtualization.git" path="meta-virtualization"/>
   <project remote="dnyocto" revision="03b0fbcf6b3b5cd16ae16738fbaabd1c6bf98536" name="poky.git" path="poky"/>
-  <project remote="alb" revision="a80814a8f950a0d887f7860f32cf2c675b32b50c" name="meta-fsl-s32v.git" path="meta-fsl-s32v"/>
-  <project remote="alb" revision="ef75e677db939fa8088cc654ed3eca8d1806d79d" name="meta-fsl-arm.git" path="meta-fsl-arm"/>
-
+ 
   </manifest>
 
