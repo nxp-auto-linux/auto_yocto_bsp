@@ -5,7 +5,7 @@
   <remote fetch="http://sw-stash.freescale.net/scm/alb" name="alb" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
 
-  <project remote="alb" revision="ecad6549293691ca933144b9131b7268c4f9e47e" name="meta-fsl-s32v.git" path="meta-fsl-s32v">
+  <project remote="alb" revision="577ca7ac6be02f7738fc80813788386bf6326de7" name="meta-fsl-s32v.git" path="meta-fsl-s32v">
     <copyfile dest="deploy.sh"    src="deploy.sh"/>
     <copyfile dest="README.FIRST" src="README.FIRST"/>
   </project>
