@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
   <default sync-j="2" />
-  <remote fetch="http://sw-stash.freescale.net/scm/dnyocto" name="dnyocto" />
-  <remote fetch="http://sw-stash.freescale.net/scm/alb" name="alb" />
+  <remote fetch="https://bitbucket.sw.nxp.com/scm/dnyocto" name="dnyocto" />
+  <remote fetch="https://bitbucket.sw.nxp.com/scm/alb" name="alb" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
 
   <project remote="alb" revision="3c67c65b4e65b4cea65805ffa37b398f526fa025" name="meta-fsl-s32v.git" path="meta-fsl-s32v">
