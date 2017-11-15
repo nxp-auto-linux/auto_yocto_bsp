@@ -5,7 +5,7 @@
   <remote fetch="https://bitbucket.sw.nxp.com/scm/alb" name="alb" />
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
 
-  <project remote="alb" revision="3c67c65b4e65b4cea65805ffa37b398f526fa025" name="meta-alb.git" path="meta-fsl-s32v">
+  <project remote="alb" revision="57f6777282ea866231b63bc9fb0ae73aa86e669b" name="meta-alb.git" path="meta-fsl-s32v">
     <copyfile dest="deploy.sh"    src="deploy.sh"/>
     <copyfile dest="README.FIRST" src="README.FIRST"/>
   </project>
