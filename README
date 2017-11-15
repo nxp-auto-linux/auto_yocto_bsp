@@ -1,11 +1,11 @@
 Initalize using the default configuration
 ==========================================
-repo init -u http://sw-stash.freescale.net/scm/alb/fsl-s32v-yocto-bsp.git
+repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git
 repo sync
 
 Initialize using the latest manifest on the develop branch
 ==========================================================
-repo init -u http://sw-stash.freescale.net/scm/alb/fsl-s32v-yocto-bsp.git -b develop
+repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git -b develop
 repo sync
 
 Note: If targetting another branch, change the '-b' parameter accordingly.
