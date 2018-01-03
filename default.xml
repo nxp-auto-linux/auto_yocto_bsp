@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
   <default sync-j="2" />
-  <remote fetch="https://bitbucket.sw.nxp.com/scm/dnyocto" name="dnyocto" />
-  <remote fetch="https://bitbucket.sw.nxp.com/scm/alb" name="alb" />
+  <remote fetch="https://bitbucket.sw.nxp.com/scm/alb" name="alb"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="http://git.linaro.org/openembedded" name="linaro"/>
+  <!--remote fetch="https://github.com" name="github"/-->
 
-  <project remote="alb" revision="cf21faeeb9e060bae002d5e6978d7316ce8119ed" name="meta-alb.git" path="meta-fsl-s32v">
-    <copyfile dest="deploy.sh"    src="deploy.sh"/>
-    <copyfile dest="README.FIRST" src="README.FIRST"/>
+  <project remote="alb" revision="rocko-develop" name="meta-alb.git" path="sources/meta-alb">
+    <copyfile dest="setup-env"    src="setup-env"/>
   </project>
-  <project remote="dnyocto" revision="b8ff02a8d508464a16c84e1d13c155f45aa98cbe" name="meta-fsl-networking.git" path="meta-fsl-networking"/>
-  <project remote="dnyocto" revision="0a235c4bcd4057608ee60b8c898eec9509632b95" name="meta-fsl-toolchain.git" path="meta-fsl-toolchain"/>
-  <project remote="dnyocto" revision="5075a82bd510d19617803fb16da2375605225cbb" name="meta-linaro.git" path="meta-linaro"/>
-  <project remote="dnyocto" revision="c841231b9f327d2d06d19d2ba1324dd86b83617c" name="meta-oe.git" path="meta-oe"/>
-  <project remote="dnyocto" revision="0277cbcb47db4239d0a4aa3b37c5c6a705070951" name="meta-virtualization.git" path="meta-virtualization"/>
-  <project remote="dnyocto" revision="03b0fbcf6b3b5cd16ae16738fbaabd1c6bf98536" name="poky.git" path="poky"/>
-  <project remote="yocto"   revision="c9f259a4bf8472dfa3ff75f1c3fcbe5e0ded7aaf" name="meta-fsl-arm" path="meta-fsl-arm"/>
- 
-  </manifest>
+  <project remote="yocto" revision="rocko" name="meta-freescale.git" path="sources/meta-freescale"/>
+  
+  <project remote="oe" revision="rocko" name="meta-openembedded.git" path="sources/meta-openembedded"/>
+  <project remote="yocto" revision="rocko" name="poky.git" path="sources/poky"/>
+  <project remote="linaro" revision="rocko" name="meta-linaro.git" path="sources/meta-linaro"/>
 
+  <!-- Add this project if we want virtualization 
+  <project remote="yocto" revision="rocko" name="sources/meta-virtualization.git" path="meta-virtualization"/>
+  -->
+  <!-- Add this project if we want fsl qoriq networking images
+  <project remote="github" revision="rocko" name="qoriq-open-source/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
+  -->
+
+  </manifest>

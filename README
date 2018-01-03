@@ -1,11 +1,78 @@
-Initalize using the default configuration
-==========================================
-repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git
-repo sync
+OpenEmbedded/Yocto Linux BSP for NXP Auto platforms
+===================================================
 
-Initialize using the latest manifest on the develop branch
-==========================================================
-repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git -b develop
-repo sync
 
-Note: If targetting another branch, change the '-b' parameter accordingly.
+First time setup
+----------------
+
+To get the BSP you need to have `repo` installed.
+Install the `repo` utility: (only need to do this once):
+
+$: mkdir ~/bin
+$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$: chmod a+x ~/bin/repo
+$: PATH=${PATH}:~/bin
+
+
+Download the Yocto Project Environment into your directory:
+-----------------------------------------------------------
+
+$: mkdir fsl-auto-yocto-bsp
+$: cd fsl-auto-yocto-bsp
+$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git -b rocko-develop
+$: repo sync
+
+This will download the sources for the latest NXP Auto Linux BSP (from the branch rocko-develop),
+structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
+
+Note: for another Linux BSP release, please use the corresponding branch.
+
+
+Creating a Build Directory for a BSP release:
+---------------------------------------------
+
+Now you can create a build directory in the BSP root by running the command:
+
+$ . setup-env -D <distro> -e <extra-layers> -m <machine>
+
+For the NXP Auto Linux BSP, you should use:
+<distro>		fsl-auto
+<extra-layers>	meta-alb
+<machine>		any NXP Auto target, e.g. s32v234evb, s32v234bbmini etc.
+
+
+Build an image:
+---------------
+
+In the buid directory created by `setup-env`, you can run the command:
+
+$ bitbake <image-name>
+
+For the NXP Auto BSP, you may use as <image-name> any of the Auto images , e.g.
+`fsl-image-auto`.
+
+Running the above command would be enough to completely build u-boot, kernel, modules,
+and a rootfs ready to be deployed. Look for a build result in
+`build_<machine>/tmp/deploy/images/`.
+
+The file `<image-name>.sdcard` is a disk image with all necessary partitions and contains
+the bootloader, kernel and rootfs. You can just low-level copy the data on this file to the
+SD card device using dd as on the following command example:
+
+$ sudo dd if=<image-name>.sdcard of=/dev/sd<partition> bs=1M && sync
+
+Ensure that any partitions on the card are properly unmounted before writing
+the card image, or you may have a corrupted card image in the end.
+Also ensure to properly "sync" the filesystem before ejecting the card to ensure
+all data has been written.
+
+To deploy only the rootfs to the target partition, run:
+$ sudo tar -xzf <image-name>.tar.gz -C <destination>
+where <destination> is the destination partition (as mounted on the host).
+
+Note that builds with bitbake accumulate in the deployment directory.
+You may want to delete older irrelevant images after repeated builds.
+The very first build ever will take very long because a lot of one-time house keeping
+and building has to happen. You want to have a powerful build machine.
+
+Note the SOURCE_THIS file to be used when going back to building with a new shell.
