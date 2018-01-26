@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="default.xml" />
+  <remote fetch="https://bitbucket.sw.nxp.com/scm/alb" name="alb-bitbucket"/>
+
+  <remove-project name="meta-alb" />
+  <project remote="alb-bitbucket" name="meta-alb" path="sources/meta-alb">
+    <copyfile dest="setup-env-alb"    src="setup-env"/>
+  </project>
+
+  </manifest>

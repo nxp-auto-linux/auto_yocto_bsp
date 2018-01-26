@@ -25,7 +25,10 @@ $: repo sync
 This will download the sources for the latest NXP Auto Linux BSP (from the branch rocko-develop),
 structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
 
-Note: for another Linux BSP release, please use the corresponding branch.
+Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
+For example, to use NXP internal repositories, please use:
+$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/fsl-s32v-yocto-bsp.git -b rocko-develop -m default-bitbucket.xml
+$: repo sync
 
 
 Creating a Build Directory for a BSP release:
