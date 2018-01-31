@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
-  <!-- Default revision is the head of the 'rocko' branch for all upstream projects -->
-  <default sync-j="2" revision="rocko" />
   <remote fetch="https://source.codeaurora.org/external/autobsps32" name="alb"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
@@ -10,8 +8,10 @@
   <remote fetch="https://github.com" name="github"/>
   -->
 
-  <project remote="alb" revision="rocko-develop" name="meta-alb" path="sources/meta-alb">
-    <copyfile dest="setup-env"    src="setup-env"/>
+  <default sync-j="2" revision="742b484af5333810fa0b973a2b1e7e3c642305ff" remote="alb"/>
+
+  <project name="meta-alb" path="sources/meta-alb">
+    <copyfile dest="setup-env-alb"    src="setup-env"/>
   </project>
   <project remote="yocto" revision="bf7fd9cfe0788fe2f819a4ae2cc7db8327fe161a" name="meta-freescale.git" path="sources/meta-freescale"/>
   

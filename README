@@ -33,7 +33,7 @@ Creating a Build Directory for a BSP release:
 
 Now you can create a build directory in the BSP root by running the command:
 
-$ . setup-env -D <distro> -e <extra-layers> -m <machine>
+$ . setup-env-alb -D <distro> -e <extra-layers> -m <machine>
 
 For the NXP Auto Linux BSP, you should use:
 <distro>		fsl-auto
@@ -44,7 +44,7 @@ For the NXP Auto Linux BSP, you should use:
 Build an image:
 ---------------
 
-In the buid directory created by `setup-env`, you can run the command:
+In the buid directory created by `setup-env-alb`, you can run the command:
 
 $ bitbake <image-name>
 
