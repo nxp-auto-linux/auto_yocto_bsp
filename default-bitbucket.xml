@@ -5,7 +5,7 @@
 
   <remove-project name="meta-alb" />
   <project remote="alb-bitbucket" name="meta-alb" path="sources/meta-alb">
-    <copyfile dest="setup-env-alb"    src="setup-env"/>
+    <copyfile dest="setup-env"    src="setup-env"/>
   </project>
 
   </manifest>
