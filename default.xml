@@ -8,7 +8,7 @@
   <remote fetch="https://github.com" name="github"/>
   -->
 
-  <default sync-j="2" revision="742b484af5333810fa0b973a2b1e7e3c642305ff" remote="alb"/>
+  <default sync-j="2" revision="233b52646cd8bd53acab1534883fbab4e08f0e12" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="setup-env"    src="setup-env"/>
