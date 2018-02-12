@@ -36,12 +36,10 @@ Creating a Build Directory for a BSP release:
 
 Now you can create a build directory in the BSP root by running the command:
 
-$ . setup-env -D <distro> -e <extra-layers> -m <machine>
+$ . nxp-setup-alb.sh -m <machine>
 
-For the NXP Auto Linux BSP, you should use:
-<distro>		fsl-auto
-<extra-layers>	meta-alb
-<machine>		any NXP Auto target, e.g. s32v234evb, s32v234bbmini etc.
+where:
+<machine>	is any NXP Auto target, e.g. s32v234evb, s32v234bbmini, ls2084abbmini etc.
 
 
 Build an image:
