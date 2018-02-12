@@ -5,25 +5,19 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.linaro.org/openembedded" name="linaro"/>
   <!-- Add this remote for qoriq virtualization and networking images:
-  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
   -->
 
-  <default sync-j="2" revision="233b52646cd8bd53acab1534883fbab4e08f0e12" remote="alb"/>
+  <!-- The default revision and remote are applicable to the meta-alb layer -->
+  <default sync-j="2" revision="426e17f67307eb0f9e6f5304208aec08fb68e258" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
-    <copyfile dest="setup-env"    src="setup-env"/>
+    <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
   <project remote="yocto" revision="bf7fd9cfe0788fe2f819a4ae2cc7db8327fe161a" name="meta-freescale.git" path="sources/meta-freescale"/>
   
   <project remote="oe" revision="6e3fc5b8d904d06e3aa77e9ec9968ab37a798188" name="meta-openembedded.git" path="sources/meta-openembedded"/>
   <project remote="yocto" revision="c770664d3125a0a0e73444a3a2a97418b7c0d7a5" name="poky.git" path="sources/poky"/>
   <project remote="linaro" revision="30f0f5e158ba29c4b1ccfdd66f0368726e4179e0" name="meta-linaro.git" path="sources/meta-linaro"/>
-
-  <!-- Add this project if we want virtualization and update revision
-  <project remote="yocto" revision="rocko" name="sources/meta-virtualization.git" path="meta-virtualization"/>
-  -->
-  <!-- Add this project if we want fsl qoriq networking images and update revision
-  <project remote="github" revision="rocko" name="qoriq-open-source/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
-  -->
 
   </manifest>
