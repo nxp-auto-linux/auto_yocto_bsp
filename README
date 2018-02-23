@@ -19,15 +19,15 @@ Download the Yocto Project Environment into your directory:
 
 $: mkdir fsl-auto-yocto-bsp
 $: cd fsl-auto-yocto-bsp
-$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b rocko-develop
+$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b develop
 $: repo sync
 
-This will download the sources for the latest NXP Auto Linux BSP (from the branch rocko-develop),
+This will download the sources for the latest NXP Auto Linux BSP (from the branch develop),
 structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
 
 Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
 For example, to use NXP internal repositories, please use:
-$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b rocko-develop -m default-bitbucket.xml
+$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
 $: repo sync
 
 
