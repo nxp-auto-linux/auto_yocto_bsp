@@ -9,7 +9,7 @@
   -->
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="25eb771800dc9116e98da1da99435c6aaebe18af" remote="alb"/>
+  <default sync-j="2" revision="acc7ac27bfef53ddda154c200ca54331a127d404" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
