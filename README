@@ -77,3 +77,34 @@ The very first build ever will take very long because a lot of one-time house ke
 and building has to happen. You want to have a powerful build machine.
 
 Note the SOURCE_THIS file to be used when going back to building with a new shell.
+
+Images provided
+===============
+
+NOTE: For the most convenient development environment, use of
+fsl-image-auto below is suggested.
+Production embedded projects would likely use much smaller images.
+
+fsl-image-auto
+-----------------
+
+The rootfs is fairly reasonable in completeness for basic efforts and
+contains sufficient amount of basic tools for remote connection and
+mounting of NFS or other drives.
+
+
+Adding GPU drivers to S32V234 rootfs
+====================================
+
+Please download the Vivante GPU drivers from nxp.com.
+To add GPU drivers to S32V234 rootfs, follow the steps as below:
+
+- Add the following line in your chosen image script (e.g. meta-alb/recipes-fsl/images/fsl-image-auto.bb):
+    IMAGE_INSTALL += "gpu-viv-bin-s32v2xx"
+- You also need to confirm that you accept NXP's EULA by adding the following to the build folder's conf/local.conf
+  (e.g. build_s32v234evb/conf/local.conf):
+    ACCEPT_FSL_EULA = "1"
+- Use FSL_LOCAL_MIRROR variable to locate the GPU drivers previously downloaded. FSL_LOCAL_MIRROR
+   should be updated as below (e.g. build_s32v234evb_release/conf/local.conf):
+     FSL_LOCAL_MIRROR = "file://<path_to_gpu_drivers>"
+
