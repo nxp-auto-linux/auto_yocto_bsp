@@ -15,7 +15,7 @@
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
   <project remote="yocto" revision="bf7fd9cfe0788fe2f819a4ae2cc7db8327fe161a" name="meta-freescale.git" path="sources/meta-freescale"/>
-  
+  <project remote="yocto" revision="4277759428e96605b8dbe95a43891e217ae8d399" name="meta-virtualization.git" path="sources/meta-virtualization"/>  
   <project remote="oe" revision="6e3fc5b8d904d06e3aa77e9ec9968ab37a798188" name="meta-openembedded.git" path="sources/meta-openembedded"/>
   <project remote="yocto" revision="c770664d3125a0a0e73444a3a2a97418b7c0d7a5" name="poky.git" path="sources/poky"/>
   <project remote="linaro" revision="30f0f5e158ba29c4b1ccfdd66f0368726e4179e0" name="meta-linaro.git" path="sources/meta-linaro"/>
