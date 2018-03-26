@@ -4,9 +4,8 @@
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
   <remote fetch="http://git.linaro.org/openembedded" name="linaro"/>
-  <!-- Add this remote for qoriq virtualization and networking images:
+
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
-  -->
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
   <default sync-j="2" revision="f5747fc559969bafa4d5fa6e55cc5c1883090a97" remote="alb"/>
@@ -19,5 +18,9 @@
   <project remote="oe" revision="6e3fc5b8d904d06e3aa77e9ec9968ab37a798188" name="meta-openembedded.git" path="sources/meta-openembedded"/>
   <project remote="yocto" revision="c770664d3125a0a0e73444a3a2a97418b7c0d7a5" name="poky.git" path="sources/poky"/>
   <project remote="linaro" revision="30f0f5e158ba29c4b1ccfdd66f0368726e4179e0" name="meta-linaro.git" path="sources/meta-linaro"/>
+
+  <project remote="yocto" revision="3d4183b6b4d4ac530c232bcff338af6a9158f8df" name="meta-security" path="sources/meta-security"/>
+  <project remote="qoriq" revision="d8014c1c049ab466b339b35bb4318e246404f84c" name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
+
 
   </manifest>
