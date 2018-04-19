@@ -106,5 +106,5 @@ To add GPU drivers to S32V234 rootfs, follow the steps as below:
     ACCEPT_FSL_EULA = "1"
 - Use FSL_LOCAL_MIRROR variable to locate the GPU drivers previously downloaded. FSL_LOCAL_MIRROR
    should be updated as below (e.g. build_s32v234evb_release/conf/local.conf):
-     FSL_LOCAL_MIRROR = "file://<path_to_gpu_drivers>"
-
+     FSL_LOCAL_MIRROR = "file:///opt/fsl_local_mirror"
+     DISTRO_FEATURES_DEFAULT_append = " gpu"
