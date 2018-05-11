@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="default.xml" />
+
+  <project remote="alb" revision="develop" name="meta-adas" path="sources/meta-adas"/>
+  </manifest>

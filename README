@@ -26,9 +26,26 @@ This will download the sources for the latest NXP Auto Linux BSP (from the branc
 structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
 
 Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
-For example, to use NXP internal repositories, please use:
-$: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
-$: repo sync
+
+The repository provides more manifest files, particularized for different use cases.
+The desired manifest file is selected by specifying it in the repo init command,
+using parameter -m <manifest file>
+The manifests are delivered in two formats:
+<manifest>.xml and <manifest>-bitbucket.xml. The second would allow fetching
+internal bitbucket development repositories as specified in the note above.
+
+The manifest files (different than the default one) are documented below.
+
+NXP internal repositories default-bitbucket.xml, please use:
+    $: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
+    $: repo sync
+
+adas.xml / adas-bitbucket.xml
+    This manifest extends the default manifest with the meta-adas layer,
+    allowing complete integration of VSDK into the Yocto build.
+    For more details, please see the meta-adas documentation in sources/meta-adas/README
+
+    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m adas.xml
 
 
 Creating a Build Directory for a BSP release:
