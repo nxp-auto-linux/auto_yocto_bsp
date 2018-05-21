@@ -67,7 +67,7 @@ In the buid directory created by the setup script, you can run the command:
 $ bitbake <image-name>
 
 For the NXP Auto BSP, you may use as <image-name> any of the Auto images , e.g.
-`fsl-image-auto`.
+`fsl-image-base`, `fsl-image-auto`, `fsl-image-ubuntu`, `fsl-image-ubuntu-base`.
 
 Running the above command would be enough to completely build u-boot, kernel, modules,
 and a rootfs ready to be deployed. Look for a build result in
@@ -98,12 +98,18 @@ Note the SOURCE_THIS file to be used when going back to building with a new shel
 Images provided
 ===============
 
+fsl-image-ubuntu-base: A system image with a minimalist Ubuntu 16.04 LTS root filesystem
+
+fsl-image-ubuntu: A complete, development-suitable system image based on Ubuntu 16.04 LTS 
+which contains (among others): the complete kernel source code (for rebuilding the kernel directly on the target machine), 
+compilers and toolchains (for C, C++, Java), ROS Kinetic and Docker
+
 NOTE: For the most convenient development environment, use of
 fsl-image-auto below is suggested.
 Production embedded projects would likely use much smaller images.
 
-fsl-image-auto
------------------
+fsl-image-auto: A complete system image (containing u-boot, the Linux kernel and DTBs) with a full Yocto-sourced filesystem.
+---------------
 
 The rootfs is fairly reasonable in completeness for basic efforts and
 contains sufficient amount of basic tools for remote connection and
