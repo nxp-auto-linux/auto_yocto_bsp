@@ -3,5 +3,5 @@
   <include name="default-bitbucket.xml" />
   <remote fetch="https://bitbucket.sw.nxp.com/scm/aspad" name="aspad-bitbucket"/>
 
-  <project remote="aspad-bitbucket" revision="d34aebeac577af624f0da2441b2588abe1b2ade5" name="meta-adas" path="sources/meta-adas"/>
+  <project remote="aspad-bitbucket" revision="bbde7879d1183a01a1a8cccee227d23cb0565be4" name="meta-adas" path="sources/meta-adas"/>
   </manifest>
