@@ -5,8 +5,18 @@ OpenEmbedded/Yocto Linux BSP for NXP Auto platforms
 First time setup
 ----------------
 
-To get the BSP you need to have `repo` installed.
-Install the `repo` utility: (only need to do this once):
+To get the BSP you need to have `repo` installed and its prerequisites.
+This only needs to be done once.
+
+
+Install dependencies:
+- python 2.x - 2.6 or newer ($: sudo <pkg-mgr> install python)
+- git 1.8.3 or newer ($: sudo <pkg-mgr> install git)
+- curl ($: sudo <pkg-mgr> install curl)
+where <pkg-mgr> is the package manager for your distribution
+(apt-get for Debian/Ubuntu, yum or dnf for CentOS/Fedora, zypper for Suse).
+
+Install the `repo` utility:
 
 $: mkdir ~/bin
 $: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
