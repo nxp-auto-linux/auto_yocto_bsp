@@ -47,7 +47,7 @@ internal bitbucket development repositories as specified in the note above.
 The manifest files (different than the default one) are documented below.
 
 NXP internal repositories default-bitbucket.xml, please use:
-    $: repo init -u https://bitbucket.sw.nxp.com/scm/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
+    $: repo init -u ssh://git@bitbucket.sw.nxp.com/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
     $: repo sync
 
 adas.xml / adas-bitbucket.xml
