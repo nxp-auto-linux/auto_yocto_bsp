@@ -13,14 +13,14 @@
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
-  <project remote="yocto" revision="bf7fd9cfe0788fe2f819a4ae2cc7db8327fe161a" name="meta-freescale.git" path="sources/meta-freescale"/>
-  <project remote="yocto" revision="4277759428e96605b8dbe95a43891e217ae8d399" name="meta-virtualization.git" path="sources/meta-virtualization"/>  
-  <project remote="oe" revision="6e3fc5b8d904d06e3aa77e9ec9968ab37a798188" name="meta-openembedded.git" path="sources/meta-openembedded"/>
-  <project remote="yocto" revision="c770664d3125a0a0e73444a3a2a97418b7c0d7a5" name="poky.git" path="sources/poky"/>
-  <project remote="linaro" revision="30f0f5e158ba29c4b1ccfdd66f0368726e4179e0" name="meta-linaro.git" path="sources/meta-linaro"/>
+  <project remote="yocto" revision="407c6cf408969445031a492e2d25e0e2749582ea" name="meta-freescale.git" path="sources/meta-freescale"/>
+  <project remote="yocto" revision="ed2038c935777d1336c17989d454f4e9c95fea7f" name="meta-virtualization.git" path="sources/meta-virtualization"/>  
+  <project remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" name="meta-openembedded.git" path="sources/meta-openembedded"/>
+  <project remote="yocto" revision="fa962ec72f8a8337eaae71ab622e340f6ef56395" name="poky.git" path="sources/poky"/>
+  <project remote="linaro" revision="282b47a10940c26854c1cca0ec40950192af16fc" name="meta-linaro.git" path="sources/meta-linaro"/>
 
-  <project remote="yocto" revision="3d4183b6b4d4ac530c232bcff338af6a9158f8df" name="meta-security" path="sources/meta-security"/>
-  <project remote="qoriq" revision="d8014c1c049ab466b339b35bb4318e246404f84c" name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
+  <project remote="yocto" revision="2160c5de874234045ba4e201a0703185b65dbae4" name="meta-security" path="sources/meta-security"/>
+  <project remote="qoriq" revision="67c91e3ea4e08f4bc48e2e24c8cefea3571d0d09" name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
 
 
   </manifest>
