@@ -13,7 +13,7 @@
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
-  <project remote="yocto" revision="407c6cf408969445031a492e2d25e0e2749582ea" name="meta-freescale.git" path="sources/meta-freescale"/>
+  <project remote="yocto" revision="827bda6303c9d637efb4b94727b67e1857760171" name="meta-freescale.git" path="sources/meta-freescale"/>
   <project remote="yocto" revision="ed2038c935777d1336c17989d454f4e9c95fea7f" name="meta-virtualization.git" path="sources/meta-virtualization"/>  
   <project remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" name="meta-openembedded.git" path="sources/meta-openembedded"/>
   <project remote="yocto" revision="fa962ec72f8a8337eaae71ab622e340f6ef56395" name="poky.git" path="sources/poky"/>
