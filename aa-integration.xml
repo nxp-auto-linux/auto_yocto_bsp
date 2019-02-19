@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="default.xml" />
+
+  <project remote="alb" revision="8c3fff27286f7e27c5d34d22eff0fccb8a9d314d" name="meta-aa-integration" path="sources/meta-aa-integration"/>
+  </manifest>
