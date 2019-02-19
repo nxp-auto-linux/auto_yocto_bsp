@@ -57,6 +57,12 @@ adas.xml / adas-bitbucket.xml
 
     $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m adas.xml
 
+aa-integration.xml / aa-integration-bitbucket.xml
+    This manifest extends the default manifest with the meta-aa-integration layer,
+    allowing complete integration of Adaptive Autosar R18-10 into the Yocto build.
+    For more details, please see the meta-aa-integration documentation in sources/meta-aa-integration/README
+
+    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m aa-integration.xml
 
 Creating a Build Directory for a BSP release:
 ---------------------------------------------
