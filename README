@@ -29,7 +29,7 @@ Download the Yocto Project Environment into your directory:
 
 $: mkdir fsl-auto-yocto-bsp
 $: cd fsl-auto-yocto-bsp
-$: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master
+$: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b hotfix/bsp20.0.hf1
 $: repo sync
 
 This will download the sources for the latest NXP Auto Linux BSP (from the branch alb/master),
