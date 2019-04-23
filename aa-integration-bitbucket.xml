@@ -2,5 +2,5 @@
   <manifest>
   <include name="default-bitbucket.xml" />
   
-  <project remote="alb-bitbucket" revision="8c3fff27286f7e27c5d34d22eff0fccb8a9d314d" name="meta-aa-integration" path="sources/meta-aa-integration"/>
+  <project remote="alb-bitbucket" revision="1b45c50e691eb588749814d70f6ffc09cf05ab18" name="meta-aa-integration" path="sources/meta-aa-integration"/>
   </manifest>
