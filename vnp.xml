@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <manifest>
+  <include name="default.xml" />
+  <remote fetch="https://source.codeaurora.org/external/qoriq/qoriq-yocto-sdk" name="vnp"/>
+  
+  <project remote="vnp" revision="ef8fee052fc09cf07ab2574a6de2f8e7337d46b2" name="meta-vnp" path="sources/meta-vnp"/>
+  </manifest>
