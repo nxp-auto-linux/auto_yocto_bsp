@@ -3,5 +3,5 @@
   <include name="default-bitbucket.xml" />
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/dnagw" name="vnp-bitbucket"/>
   
-  <project remote="vnp-bitbucket" revision="ef8fee052fc09cf07ab2574a6de2f8e7337d46b2" name="meta-vnp" path="sources/meta-vnp"/>
+  <project remote="vnp-bitbucket" revision="a132a935f2bda5193dbc36484f2048f3c8249299" name="meta-vnp" path="sources/meta-vnp"/>
   </manifest>
