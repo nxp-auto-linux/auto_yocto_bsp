@@ -3,7 +3,7 @@
   <remote fetch="https://source.codeaurora.org/external/autobsps32" name="alb"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="http://git.linaro.org/openembedded" name="linaro"/>
+  <remote fetch="https://git.linaro.org/openembedded" name="linaro"/>
 
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
 
