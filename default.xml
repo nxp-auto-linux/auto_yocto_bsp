@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
   <remote fetch="https://source.codeaurora.org/external/autobsps32" name="alb"/>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
-  <remote fetch="http://git.linaro.org/openembedded" name="linaro"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.openembedded.org" name="oe"/>
+  <remote fetch="https://git.linaro.org/openembedded" name="linaro"/>
 
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer, release 16.1 -->
-  <default sync-j="2" revision="dd24b2e5c4fa0c142e7ce85094c05cbb127d6fb2" remote="alb"/>
+  <default sync-j="2" revision="8e0c5b9de8da187370f8d4598ef078e8c44db416" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
-  <project remote="yocto" revision="827bda6303c9d637efb4b94727b67e1857760171" name="meta-freescale.git" path="sources/meta-freescale"/>
-  <project remote="yocto" revision="ed2038c935777d1336c17989d454f4e9c95fea7f" name="meta-virtualization.git" path="sources/meta-virtualization"/>  
-  <project remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" name="meta-openembedded.git" path="sources/meta-openembedded"/>
-  <project remote="yocto" revision="fa962ec72f8a8337eaae71ab622e340f6ef56395" name="poky.git" path="sources/poky"/>
+  <project remote="yocto" revision="827bda6303c9d637efb4b94727b67e1857760171" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="yocto" revision="ed2038c935777d1336c17989d454f4e9c95fea7f" name="meta-virtualization" path="sources/meta-virtualization"/>
+  <project remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="yocto" revision="fa962ec72f8a8337eaae71ab622e340f6ef56395" name="poky" path="sources/poky"/>
   <project remote="linaro" revision="282b47a10940c26854c1cca0ec40950192af16fc" name="meta-linaro.git" path="sources/meta-linaro"/>
 
   <project remote="yocto" revision="2160c5de874234045ba4e201a0703185b65dbae4" name="meta-security" path="sources/meta-security"/>
