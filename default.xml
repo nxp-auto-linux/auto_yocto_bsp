@@ -7,20 +7,21 @@
 
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
 
-  <!-- The default revision and remote are applicable to the meta-alb layer, release 16.1 -->
-  <default sync-j="2" revision="fced4f2a001d14a6ae3d53238424d6eec50060db" remote="alb"/>
+  <!-- The default revision and remote are applicable to the meta-alb layer -->
+  <default sync-j="2" revision="23bd4f25a80cdbe3f6d72ba032d37c3c420b6ebe" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
-  <project remote="yocto" revision="827bda6303c9d637efb4b94727b67e1857760171" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="yocto" revision="ed2038c935777d1336c17989d454f4e9c95fea7f" name="meta-virtualization" path="sources/meta-virtualization"/>
-  <project remote="oe" revision="8760facba1bceb299b3613b8955621ddaa3d4c3f" name="meta-openembedded" path="sources/meta-openembedded"/>
-  <project remote="yocto" revision="fa962ec72f8a8337eaae71ab622e340f6ef56395" name="poky" path="sources/poky"/>
-  <project remote="linaro" revision="282b47a10940c26854c1cca0ec40950192af16fc" name="meta-linaro.git" path="sources/meta-linaro"/>
 
-  <project remote="yocto" revision="2160c5de874234045ba4e201a0703185b65dbae4" name="meta-security" path="sources/meta-security"/>
-  <project remote="qoriq" revision="67c91e3ea4e08f4bc48e2e24c8cefea3571d0d09" name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
+  <!-- projects below synchronized with default.xml in LFAC -->
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="0be39721cea6e04c589a419f4bb07fabd0da6704" upstream="zeus"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="aad5b3d070cd8c58828b0975cf861d8ebc90f460" upstream="zeus"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="0275e68b0576cdefc19718e4b1977044f9f43f48" upstream="zeus"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="27ddb455543b670097e252ba0d0ad5b7e4101748" upstream="master"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="04e0d9de8cbaeb76aff6e78b90941a6e9a359b87" upstream="master"/>
 
+  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="7603aadcc0c1544588203b6a13ecbf28c50d158d" upstream="zeus"/>
+  <project name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq" remote="qoriq" revision="aa8d344cba2e91983083a8fb941dd538d74222d7" upstream="zeus"/>
 
   </manifest>
