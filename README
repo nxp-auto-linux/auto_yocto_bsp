@@ -67,6 +67,9 @@ aa-integration.xml / aa-integration-bitbucket.xml
 Creating a Build Directory for a BSP release:
 ---------------------------------------------
 
+To install all prerequisites before starting any build, run:
+$ ./sources/meta-alb/scripts/host-prepare.sh
+
 Now you can create a build directory in the BSP root by running the command:
 
 $ . nxp-setup-alb.sh -m <machine>
