@@ -15,7 +15,7 @@
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="0be39721cea6e04c589a419f4bb07fabd0da6704" upstream="zeus"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="0eb21f9d0d023fbb054e284986815510a84dbd66" upstream="zeus"/>
   <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="aad5b3d070cd8c58828b0975cf861d8ebc90f460" upstream="zeus"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="0275e68b0576cdefc19718e4b1977044f9f43f48" upstream="zeus"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="27ddb455543b670097e252ba0d0ad5b7e4101748" upstream="master"/>
