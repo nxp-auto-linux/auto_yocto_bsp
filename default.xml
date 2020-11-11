@@ -8,7 +8,7 @@
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer, release 16.1 -->
-  <default sync-j="2" revision="1f7bc63a5b9dc2780d5983178b504cbbb5d1ea52" remote="alb"/>
+  <default sync-j="2" revision="f91cd915ab925f5d042f816e01a05d5a712f5a73" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
