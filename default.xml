@@ -8,20 +8,21 @@
   <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="40dbb9487313188b92e5c6feed8725c88521019a" remote="alb"/>
+  <default sync-j="2" revision="359718ba1b6774631c9108e40cb10d126475e355" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="0eb21f9d0d023fbb054e284986815510a84dbd66" upstream="zeus"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="aad5b3d070cd8c58828b0975cf861d8ebc90f460" upstream="zeus"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="0275e68b0576cdefc19718e4b1977044f9f43f48" upstream="zeus"/>
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="27ddb455543b670097e252ba0d0ad5b7e4101748" upstream="master"/>
-  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="04e0d9de8cbaeb76aff6e78b90941a6e9a359b87" upstream="master"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="682c00566aa3cf0deeff0cfd349494f078f38a04" upstream="dunfell"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="cc155826b0b4f202a8fa4ac103b7c38368d32734" upstream="dunfell"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="c253fd28ad26b4996666b0794dfee1d59c14e3ca" upstream="dunfell"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="d83f7cb0c90666fedd127d5173e6c8b972755c32" upstream="master"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="5c2de3daedd3f65171b9debf938683ce6e7746ea" upstream="master"/>
 
-  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="7603aadcc0c1544588203b6a13ecbf28c50d158d" upstream="zeus"/>
-  <project name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq" remote="qoriq" revision="aa8d344cba2e91983083a8fb941dd538d74222d7" upstream="zeus"/>
+  <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="07dca1e54f82a06939df9b890c6d1ce1e3197f75" upstream="dunfell"/>
+  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="10af9133aeb28b3487fd227c900c11b786505699" upstream="dunfell"/>
+  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="1a90c827fa28e7bb959fdebcf1523268c10cffa9" upstream="dunfell"/>
 
   </manifest>
