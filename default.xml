@@ -23,6 +23,6 @@
 
   <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="07dca1e54f82a06939df9b890c6d1ce1e3197f75" upstream="dunfell"/>
   <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="10af9133aeb28b3487fd227c900c11b786505699" upstream="dunfell"/>
-  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="1a90c827fa28e7bb959fdebcf1523268c10cffa9" upstream="dunfell"/>
+  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="e381f3eb56b75a4f5f54092952cbb30d8ae8cbcf" upstream="dunfell"/>
 
   </manifest>
