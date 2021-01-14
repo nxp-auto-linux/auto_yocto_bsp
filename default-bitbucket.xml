@@ -4,10 +4,10 @@
   <remote fetch="ssh://git@bitbucket.sw.nxp.com/alb" name="alb-bitbucket"/>
 
   <remove-project name="meta-alb" />
-  <project remote="alb-bitbucket" name="meta-alb" path="sources/meta-alb">
+  <project remote="alb-bitbucket" revision="develop-3.2" name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
-  <project remote="alb-bitbucket" revision="af8c361bc7b3cc74bc739efed71946c5b1a15cf5" name="meta-alb-dev" path="sources/meta-alb-dev"/>
+  <project remote="alb-bitbucket" revision="develop-3.2" name="meta-alb-dev" path="sources/meta-alb-dev"/>
 
   </manifest>
