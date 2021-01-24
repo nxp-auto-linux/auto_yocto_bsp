@@ -21,7 +21,7 @@
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="d0adcbaa53ffdf5618a90456b93ec7d25612b541"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="74e0b8d2acc6b9bbc0345a500a700932d70772f4"/>
   <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="ac4ccd2fbbb599d75ca4051911fcbaca39dbe6d7"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="98df63020d963d6ff606db77aae7542a4e5f5291"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="671fe65b31ca35379916a180415e1ab7d47bd51b"/>
 
   <!-- projects below are not updated for gatesgarth -->
   <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="e381f3eb56b75a4f5f54092952cbb30d8ae8cbcf" upstream="dunfell"/>
