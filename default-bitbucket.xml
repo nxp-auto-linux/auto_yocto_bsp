@@ -5,11 +5,11 @@
   <remote fetch="ssh://git@bitbucket.sw.nxp.com" name="qoriq-bitbucket"/>
 
   <remove-project name="meta-alb" />
-  <project remote="alb-bitbucket" revision="release/bb_bsp0.3" name="meta-alb" path="sources/meta-alb">
+  <project remote="alb-bitbucket" name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
-  <project remote="alb-bitbucket" revision="release/bb_bsp0.3" name="meta-alb-dev" path="sources/meta-alb-dev"/>
+  <project remote="alb-bitbucket" revision="bd3e31340a536b12cef6b2b0db08bd7081703ccd" name="meta-alb-dev" path="sources/meta-alb-dev"/>
 
   <remove-project name="qoriq-components/meta-qoriq" />
   <project remote="qoriq-bitbucket" revision="dunfell-bb3" name="yocto/meta-qoriq" path="sources/meta-qoriq"/>
