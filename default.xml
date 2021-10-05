@@ -24,6 +24,6 @@
   <project name="poky" path="sources/poky" remote="yocto" revision="671fe65b31ca35379916a180415e1ab7d47bd51b"/>
 
   <!-- projects below are not updated for gatesgarth -->
-  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="e381f3eb56b75a4f5f54092952cbb30d8ae8cbcf" upstream="dunfell"/>
+  <project name="qoriq-components/meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="1dfc9827dcb51d133145f2552f39d3102636ab35" upstream="dunfell"/>
 
   </manifest>
