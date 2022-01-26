@@ -2,5 +2,5 @@
   <manifest>
   <include name="default.xml" />
 
-  <project remote="alb" revision="7e75da2b7bc93bac7fd25839d0941f5bad582fa1" name="meta-aa-integration" path="sources/meta-aa-integration"/>
+  <project remote="alb" revision="1bd4d8e9bbdbd6ac7354b639e732321fea27c057" name="meta-aa-integration" path="sources/meta-aa-integration"/>
   </manifest>
