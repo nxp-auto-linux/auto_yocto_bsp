@@ -29,10 +29,10 @@ Download the Yocto Project Environment into your directory:
 
 $: mkdir fsl-auto-yocto-bsp
 $: cd fsl-auto-yocto-bsp
-$: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master
+$: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor>
 $: repo sync
 
-This will download the sources for the latest NXP Auto Linux BSP (from the branch alb/master),
+This will download the sources for the latest NXP Auto Linux BSP (from the branch release/bsp<major>.<minor>),
 structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
 
 Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
@@ -55,14 +55,14 @@ adas.xml / adas-bitbucket.xml
     allowing complete integration of VSDK into the Yocto build.
     For more details, please see the meta-adas documentation in sources/meta-adas/README
 
-    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m adas.xml
+    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m adas.xml
 
 aa-integration.xml / aa-integration-bitbucket.xml
     This manifest extends the default manifest with the meta-aa-integration layer,
     allowing complete integration of Adaptive Autosar R18-10 into the Yocto build.
     For more details, please see the meta-aa-integration documentation in sources/meta-aa-integration/README
 
-    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m aa-integration.xml
+    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m aa-integration.xml
 
 Creating a Build Directory for a BSP release:
 ---------------------------------------------
@@ -75,7 +75,7 @@ Now you can create a build directory in the BSP root by running the command:
 $ . nxp-setup-alb.sh -m <machine>
 
 where:
-<machine>	is any NXP Auto target, e.g. s32v234evb, s32v234bbmini, ls2084abbmini etc.
+<machine>	is any NXP Auto target, e.g. s32g399aevb3, s32r45evb, s32g399ardb3ubuntu etc.
 
 
 Build an image:
@@ -87,6 +87,8 @@ $ bitbake <image-name>
 
 For the NXP Auto BSP, you may use as <image-name> any of the Auto images , e.g.
 `fsl-image-base`, `fsl-image-auto`, `fsl-image-ubuntu`, `fsl-image-ubuntu-base`.
+Ubuntu images can only be built for ubuntu machines, while yocto images can
+only be built for non-Ubuntu machines.
 
 Running the above command would be enough to completely build u-boot, kernel, modules,
 and a rootfs ready to be deployed. Look for a build result in
@@ -117,11 +119,14 @@ Note the SOURCE_THIS file to be used when going back to building with a new shel
 Images provided
 ===============
 
-fsl-image-ubuntu-base: A system image with a minimalist Ubuntu 16.04 LTS root filesystem
+fsl-image-ubuntu-base: A system image with a minimalist Ubuntu 20.04 LTS root filesystem
 
-fsl-image-ubuntu: A complete, development-suitable system image based on Ubuntu 16.04 LTS 
+fsl-image-ubuntu: A complete, development-suitable system image based on Ubuntu 20.04 LTS 
 which contains (among others): the complete kernel source code (for rebuilding the kernel directly on the target machine), 
 compilers and toolchains (for C, C++, Java), ROS Kinetic and Docker
+
+NOTE: Please build fsl-image-ubuntu-base or fsl-image-ubuntu only for machines with name ending in `ubuntu`.
+For the other machines, please use any of the images with Yocto rootfilesystem.
 
 NOTE: For the most convenient development environment, use of
 fsl-image-auto below is suggested.
@@ -133,20 +138,3 @@ fsl-image-auto: A complete system image (containing u-boot, the Linux kernel and
 The rootfs is fairly reasonable in completeness for basic efforts and
 contains sufficient amount of basic tools for remote connection and
 mounting of NFS or other drives.
-
-
-Adding GPU drivers to S32V234 rootfs
-====================================
-
-Please download the Vivante GPU drivers from nxp.com.
-To add GPU drivers to S32V234 rootfs, follow the steps as below:
-
-- Add the following line in your chosen image script (e.g. meta-alb/recipes-fsl/images/fsl-image-auto.bb):
-    IMAGE_INSTALL += "gpu-viv-bin-s32v2xx"
-- You also need to confirm that you accept NXP's EULA by adding the following to the build folder's conf/local.conf
-  (e.g. build_s32v234evb/conf/local.conf):
-    ACCEPT_FSL_EULA = "1"
-- Use FSL_LOCAL_MIRROR variable to locate the GPU drivers previously downloaded. FSL_LOCAL_MIRROR
-   should be updated as below (e.g. build_s32v234evb_release/conf/local.conf):
-     FSL_LOCAL_MIRROR = "file:///opt/fsl_local_mirror"
-     DISTRO_FEATURES_DEFAULT_append = " gpu"
