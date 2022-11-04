@@ -15,15 +15,15 @@
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="41d4f625c6db7a778f0f9a735c2cb48e023bc49b"/>
-  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="fb96032b38e3064290ab0891238c92d47a45f151"/>
-  <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="3fae17aece0e6d82f56965fe501bf7080c671df8"/>
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="3daf99fd138b0eebe864bbe1b9c71241d97c4512"/>
-  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="fa093228c02c4a42da1f9abb77c4c57d70d5a212"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="f3f7a5f1a4713f145107bb043e0d14cb3a51c62f"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="6a751048e50c00261d99c2d8d69534f7a8da38a9"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="3747641f1e71d8e4edd5b587b49d09dc2d243942"/>
+  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="0979e3e8f9f9c342929d6ab755b002c784c89a6b"/>
+  <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="c79262a30bd385f5dbb009ef8704a1a01644528e"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="9a487c1851aa2021cf24f951957e22fd429c8025"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="744a4b6eda88b9a9ca1cf0df6e18be384d9054e3"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="2e79b199114b25d81bfaa029ccfb17676946d20d"/>
 
   <!-- projects below are not updated for gatesgarth -->
-  <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="eb3f043a733a8a49345277c974dc0e0bd88e1a6b"/>
+  <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="065e7ef5516d54c76f6dda50cdd1fdab56669256"/>
 
   </manifest>
