@@ -3,7 +3,6 @@
   <remote fetch="https://github.com/nxp-auto-linux" name="alb"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://git.openembedded.org" name="oe"/>
-  <remote fetch="https://git.linaro.org/openembedded" name="linaro"/>
 
   <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
@@ -16,7 +15,6 @@
 
   <!-- projects below synchronized with default.xml in LFAC -->
   <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="3747641f1e71d8e4edd5b587b49d09dc2d243942"/>
-  <project name="meta-linaro" path="sources/meta-linaro" remote="linaro" revision="0979e3e8f9f9c342929d6ab755b002c784c89a6b"/>
   <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
   <project name="meta-security" path="sources/meta-security" remote="yocto" revision="c79262a30bd385f5dbb009ef8704a1a01644528e"/>
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="9a487c1851aa2021cf24f951957e22fd429c8025"/>
