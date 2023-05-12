@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
-  <remote fetch="https://source.codeaurora.org/external/autobsps32" name="alb"/>
+  <remote fetch="https://github.com/nxp-auto-linux" name="alb"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://git.openembedded.org" name="oe"/>
   <remote fetch="https://git.linaro.org/openembedded" name="linaro"/>
 
-  <remote fetch="https://source.codeaurora.org/external/qoriq" name="qoriq"/>
+  <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer, release 16.1 -->
   <default sync-j="2" revision="a78a591ec21cdfb1b80063e899e3ccf9c1b5bdcb" remote="alb"/>
@@ -20,7 +20,7 @@
   <project remote="linaro" revision="282b47a10940c26854c1cca0ec40950192af16fc" name="meta-linaro.git" path="sources/meta-linaro"/>
 
   <project remote="yocto" revision="2160c5de874234045ba4e201a0703185b65dbae4" name="meta-security" path="sources/meta-security"/>
-  <project remote="qoriq" revision="67c91e3ea4e08f4bc48e2e24c8cefea3571d0d09" name="qoriq-components/meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
+  <project remote="qoriq" revision="67c91e3ea4e08f4bc48e2e24c8cefea3571d0d09" name="meta-qoriq-demos" path="sources/meta-qoriq-demos"/>
 
 
   </manifest>
