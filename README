@@ -29,10 +29,10 @@ Download the Yocto Project Environment into your directory:
 
 $: mkdir fsl-auto-yocto-bsp
 $: cd fsl-auto-yocto-bsp
-$: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master
+$: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor>
 $: repo sync
 
-This will download the sources for the latest NXP Auto Linux BSP (from the branch alb/master),
+This will download the sources for the latest NXP Auto Linux BSP (from the branch release/bsp<major>.<minor>),
 structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
 
 Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
@@ -55,14 +55,14 @@ adas.xml / adas-bitbucket.xml
     allowing complete integration of VSDK into the Yocto build.
     For more details, please see the meta-adas documentation in sources/meta-adas/README
 
-    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m adas.xml
+    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m adas.xml
 
 aa-integration.xml / aa-integration-bitbucket.xml
     This manifest extends the default manifest with the meta-aa-integration layer,
     allowing complete integration of Adaptive Autosar R18-10 into the Yocto build.
     For more details, please see the meta-aa-integration documentation in sources/meta-aa-integration/README
 
-    $: repo init -u https://source.codeaurora.org/external/autobsps32/auto_yocto_bsp -b alb/master -m aa-integration.xml
+    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m aa-integration.xml
 
 Creating a Build Directory for a BSP release:
 ---------------------------------------------
