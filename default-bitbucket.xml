@@ -8,6 +8,6 @@
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
   </project>
 
-  <project remote="alb-bitbucket" revision="93d3676a3c040ad517f9353b35bce08b48446e6a" name="meta-alb-dev" path="sources/meta-alb-dev"/>
+  <project remote="alb-bitbucket" revision="598952146cf3799ac6259caad49dc201e6343756" name="meta-alb-dev" path="sources/meta-alb-dev"/>
 
   </manifest>
