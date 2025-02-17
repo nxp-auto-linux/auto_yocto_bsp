@@ -15,15 +15,14 @@
   </project>
 
   <!-- projects below synchronized with default.xml in LFAC -->
-  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="c525e0c19bdc46d45f71873b5f286f49abb69418"/>
-  <project name="meta-python2" path="sources/meta-openembedded/meta-python2" remote="oe" revision="f02882e2aa9279ca7becca8d0cedbffe88b5a253"/>
-  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="353078bc06c8b471736daab6ed193e30d533d1f1"/>
-  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="e0cd09e3b8367e2745a27db2e7ff1f8452c8cf41"/>
-  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dd3d2293ffdf2559f8a433f241765a8ab50cd085"/>
-  <project name="poky" path="sources/poky" remote="yocto" revision="4cdc553814640851cce85f84ee9c0b58646cd33b"/>
+  <project name="meta-freescale" path="sources/meta-freescale" remote="yocto" revision="bae75dfe4fbe11f98d497b6313fe4cf1ce1b21cf"/>
+  <project name="meta-security" path="sources/meta-security" remote="yocto" revision="bc865c5276c2ab4031229916e8d7c20148dfbac3"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="79673f5c67b022e7aadeb231872470295e5b9188"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dda0d53326017d6758ec6bdfdaf2f484c089d13f"/>
+  <project name="poky" path="sources/poky" remote="yocto" revision="2541a8171f91812a4b16e7dc4da0d77d2318a256"/>
   <project name="meta-rust-bin" path="sources/meta-rust-bin" remote="rust" revision="85a33ed0725c8e88f8e103c347d207c602f8b86e"/>
 
-  <!-- projects below are not updated for gatesgarth -->
-  <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="f1b87b247b1dbd9392e421b82ece1d91408fef8b"/>
+
+  <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="533e78f92774326d48f15adb5982a516fe114ee7"/>
 
   </manifest>
