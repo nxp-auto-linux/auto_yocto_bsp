@@ -7,7 +7,7 @@
   <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
   <!-- The default revision and remote are applicable to the meta-alb layer -->
-  <default sync-j="2" revision="598a2093a8a34534e408e91be1442098f99d2f5b" remote="alb"/>
+  <default sync-j="2" revision="0a6f75b55a55b98a94686163fe75641db69d9ee1" remote="alb"/>
 
   <project name="meta-alb" path="sources/meta-alb">
     <copyfile dest="nxp-setup-alb.sh"    src="nxp-setup-alb.sh"/>
