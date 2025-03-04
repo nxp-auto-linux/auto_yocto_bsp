@@ -3,6 +3,7 @@
   <remote fetch="https://github.com/nxp-auto-linux" name="alb"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://git.openembedded.org" name="oe"/>
+  <remote fetch="https://github.com/rust-embedded" name="rust"/>
 
   <remote fetch="https://github.com/nxp-qoriq" name="qoriq"/>
 
@@ -20,6 +21,7 @@
   <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="e0cd09e3b8367e2745a27db2e7ff1f8452c8cf41"/>
   <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="dd3d2293ffdf2559f8a433f241765a8ab50cd085"/>
   <project name="poky" path="sources/poky" remote="yocto" revision="4cdc553814640851cce85f84ee9c0b58646cd33b"/>
+  <project name="meta-rust-bin" path="sources/meta-rust-bin" remote="rust" revision="85a33ed0725c8e88f8e103c347d207c602f8b86e"/>
 
   <!-- projects below are not updated for gatesgarth -->
   <project name="meta-qoriq" path="sources/meta-qoriq" remote="qoriq" revision="f1b87b247b1dbd9392e421b82ece1d91408fef8b"/>
