@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
   <manifest>
   <remote fetch="https://github.com/nxp-auto-linux" name="alb"/>
-  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.yoctoproject.org" name="yocto"/>
   <remote fetch="https://git.openembedded.org" name="oe"/>
   <remote fetch="https://github.com/rust-embedded" name="rust"/>
 
