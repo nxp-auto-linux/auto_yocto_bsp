@@ -19,7 +19,7 @@ where <pkg-mgr> is the package manager for your distribution
 Install the `repo` utility:
 
 $: mkdir ~/bin
-$: curl http://commondatastorage.googleapis.com/git-repo-downloads/repo  > ~/bin/repo
+$: curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 $: chmod a+x ~/bin/repo
 $: PATH=${PATH}:~/bin
 
