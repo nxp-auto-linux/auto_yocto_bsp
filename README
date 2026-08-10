@@ -5,15 +5,15 @@ OpenEmbedded/Yocto Linux BSP for NXP Auto platforms
 First time setup
 ----------------
 
-To get the BSP you need to have `repo` installed and its prerequisites.
+To obtain the BSP, repo and its prerequisites must be installed.
 This only needs to be done once.
 
 
 Install dependencies:
-- python 2.x - 2.6 or newer ($: sudo <pkg-mgr> install python)
+- python 3.6.0 or newer ($: sudo <pkg-mgr> install python3)
 - git 1.8.3 or newer ($: sudo <pkg-mgr> install git)
 - curl ($: sudo <pkg-mgr> install curl)
-where <pkg-mgr> is the package manager for your distribution
+where <pkg-mgr> is the package manager for the host distribution.
 (apt-get for Debian/Ubuntu, yum or dnf for CentOS/Fedora, zypper for Suse).
 
 Install the `repo` utility:
@@ -24,45 +24,21 @@ $: chmod a+x ~/bin/repo
 $: PATH=${PATH}:~/bin
 
 
-Download the Yocto Project Environment into your directory:
+Download the Yocto Project Environment into a directory:
 -----------------------------------------------------------
 
 $: mkdir fsl-auto-yocto-bsp
 $: cd fsl-auto-yocto-bsp
-$: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor>
+$: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/<prefix><major>.<minor>
 $: repo sync
 
-This will download the sources for the latest NXP Auto Linux BSP (from the branch release/bsp<major>.<minor>),
-structured ontop of the Yocto rocko release and upstream NXP QorIQ SDK.
+Where <prefix> should be set to "bsp" for G releases and to "s32n7_" for N releases.
 
-Note: for another Linux BSP release or engineering build, please use the corresponding branch and manifest.
+This downloads the sources for the latest NXP Auto Linux BSP from the `release/<prefix><major>.<minor>` branch,
+based on the Yocto Scarthgap release.
 
-The repository provides more manifest files, particularized for different use cases.
-The desired manifest file is selected by specifying it in the repo init command,
-using parameter -m <manifest file>
-The manifests are delivered in two formats:
-<manifest>.xml and <manifest>-bitbucket.xml. The second would allow fetching
-internal bitbucket development repositories as specified in the note above.
+Note: To use a different Linux BSP release or an engineering build, select the corresponding branch.
 
-The manifest files (different than the default one) are documented below.
-
-NXP internal repositories default-bitbucket.xml, please use:
-    $: repo init -u ssh://git@bitbucket.sw.nxp.com/alb/auto_yocto_bsp.git -b develop -m default-bitbucket.xml
-    $: repo sync
-
-adas.xml / adas-bitbucket.xml
-    This manifest extends the default manifest with the meta-adas layer,
-    allowing complete integration of VSDK into the Yocto build.
-    For more details, please see the meta-adas documentation in sources/meta-adas/README
-
-    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m adas.xml
-
-aa-integration.xml / aa-integration-bitbucket.xml
-    This manifest extends the default manifest with the meta-aa-integration layer,
-    allowing complete integration of Adaptive Autosar R18-10 into the Yocto build.
-    For more details, please see the meta-aa-integration documentation in sources/meta-aa-integration/README
-
-    $: repo init -u https://github.com/nxp-auto-linux/auto_yocto_bsp -b release/bsp<major>.<minor> -m aa-integration.xml
 
 Creating a Build Directory for a BSP release:
 ---------------------------------------------
@@ -70,59 +46,61 @@ Creating a Build Directory for a BSP release:
 To install all prerequisites before starting any build, run:
 $ ./sources/meta-alb/scripts/host-prepare.sh
 
-Now you can create a build directory in the BSP root by running the command:
+Create build directory in the BSP root by running the following command:
 
-$ . nxp-setup-alb.sh -m <machine>
+$ source nxp-setup-alb.sh -m <machine>
 
 where:
-<machine>	is any NXP Auto target, e.g. s32g399aevb3, s32r45evb, s32g399ardb3ubuntu etc.
+<machine>	is any NXP Auto target, e.g. s32n79rdb, s32g399aevb3, s32r45evb, s32g399ardb3ubuntu etc.
 
 
 Build an image:
 ---------------
 
-In the buid directory created by the setup script, you can run the command:
+In the build directory created by the setup script, run the following command:
 
 $ bitbake <image-name>
 
-For the NXP Auto BSP, you may use as <image-name> any of the Auto images , e.g.
-`fsl-image-base`, `fsl-image-auto`, `fsl-image-ubuntu`, `fsl-image-ubuntu-base`.
+For the NXP Auto BSP, `<image-name>` may be any of the Auto images, such as
+`fsl-image-base`, `fsl-image-auto`, `fsl-image-ubuntu`, or `fsl-image-ubuntu-base`.
 Ubuntu images can only be built for ubuntu machines, while yocto images can
 only be built for non-Ubuntu machines.
 
-Running the above command would be enough to completely build u-boot, kernel, modules,
-and a rootfs ready to be deployed. Look for a build result in
-`build_<machine>/tmp/deploy/images/`.
+Running the above command builds U-Boot, the kernel, kernel modules,
+and a deployable root filesystem. The generated build artifacts can be found in:
+`build_<machine>/tmp/deploy/images/`
 
-The file `<image-name>.sdcard` is a disk image with all necessary partitions and contains
-the bootloader, kernel and rootfs. You can just low-level copy the data on this file to the
-SD card device using dd as on the following command example:
+The `<image-name>.sdcard` file is a disk image containing all required partitions,
+including the bootloader, kernel, and root filesystem. The contents of this file can
+be written directly to an SD card device using `dd`, as shown in the following example:
 
 $ sudo dd if=<image-name>.sdcard of=/dev/sd<partition> bs=1M && sync
 
 Ensure that any partitions on the card are properly unmounted before writing
-the card image, or you may have a corrupted card image in the end.
-Also ensure to properly "sync" the filesystem before ejecting the card to ensure
-all data has been written.
+the card image; otherwise, the resulting card image may be corrupted.
+Also ensure that the filesystem is properly synchronized before ejecting
+the card to guarantee that all data has been written.
 
 To deploy only the rootfs to the target partition, run:
 $ sudo tar -xzf <image-name>.tar.gz -C <destination>
 where <destination> is the destination partition (as mounted on the host).
 
-Note that builds with bitbake accumulate in the deployment directory.
-You may want to delete older irrelevant images after repeated builds.
-The very first build ever will take very long because a lot of one-time house keeping
-and building has to happen. You want to have a powerful build machine.
+Note that BitBake builds accumulate in the deployment directory.
+Older, no longer relevant images may be removed after repeated builds.
+The first build can take a significant amount of time because extensive
+one-time setup and build tasks must be completed.
+A sufficiently powerful build machine is recommended.
 
-Note the SOURCE_THIS file to be used when going back to building with a new shell.
+When resuming Yocto builds in a new shell, source the `SOURCE_THIS` file before continuing.
+
 
 Images provided
 ===============
 
-fsl-image-ubuntu-base: A system image with a minimalist Ubuntu 20.04 LTS root filesystem
+fsl-image-ubuntu-base: A system image with a minimalist Ubuntu 24.04 LTS root filesystem
 
-fsl-image-ubuntu: A complete, development-suitable system image based on Ubuntu 20.04 LTS 
-which contains (among others): the complete kernel source code (for rebuilding the kernel directly on the target machine), 
+fsl-image-ubuntu: A complete, development-suitable system image based on Ubuntu 24.04 LTS
+which contains (among others): the complete kernel source code (for rebuilding the kernel directly on the target machine),
 compilers and toolchains (for C, C++, Java), ROS Kinetic and Docker
 
 NOTE: Please build fsl-image-ubuntu-base or fsl-image-ubuntu only for machines with name ending in `ubuntu`.
@@ -132,9 +110,10 @@ NOTE: For the most convenient development environment, use of
 fsl-image-auto below is suggested.
 Production embedded projects would likely use much smaller images.
 
-fsl-image-auto: A complete system image (containing u-boot, the Linux kernel and DTBs) with a full Yocto-sourced filesystem.
+fsl-image-auto: A complete system image (containing TF-A, U-Boot, Linux kernel and DTBs) with a full Yocto-sourced filesystem.
+fsl-image-base: A minimal image (containing TF-A, U-Boot, Linux kernel and DTBs) with Yocto-sourced filesystem.
 ---------------
 
-The rootfs is fairly reasonable in completeness for basic efforts and
-contains sufficient amount of basic tools for remote connection and
-mounting of NFS or other drives.
+The complete root filesystem provides a reasonably complete system and
+includes the essential tools required for remote access and for
+mounting NFS and other storage devices.
