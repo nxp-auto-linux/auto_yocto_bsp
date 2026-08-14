@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-  <manifest>
-  <include name="default-bitbucket.xml" />
-  
-  <project remote="alb-bitbucket" revision="2b6b5c8e26c96340d5457b1dac226860e3d6d812" name="meta-adas" path="sources/meta-adas"/>
-  </manifest>
